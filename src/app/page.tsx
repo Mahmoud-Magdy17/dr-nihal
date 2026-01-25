@@ -47,7 +47,7 @@ export default function HomePage() {
           </div>
 
           {/* Program Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {ELECTORAL_PROGRAM.map((program, index) => (
               <ProgramCard
                 key={program.id}
@@ -72,7 +72,7 @@ export default function HomePage() {
       {/* Key Achievements Section */}
       <section className="py-24 bg-white">
         <div className="container px-4 md:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div className="order-2 lg:order-1">
               <span className="text-[#c8a45c] font-bold text-sm tracking-wider uppercase mb-2 block">مسيرة عطاء</span>
               <h2 className="text-4xl md:text-5xl font-bold text-[#1a5d3a] mb-6">إنجازات بارزة</h2>
@@ -143,8 +143,14 @@ export default function HomePage() {
                 key={partner.name}
                 className="bg-white rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 border border-gray-100 group"
               >
-                <div className="w-16 h-16 mx-auto mb-5 rounded-full bg-[#f0f9ff] text-[#0284c7] flex items-center justify-center font-bold text-2xl group-hover:scale-110 group-hover:bg-[#1a5d3a] group-hover:text-white transition-all">
-                  {partner.name.charAt(0)}
+                <div className="h-24 mx-auto mb-4 flex items-center justify-center p-2">
+                  <div className="relative w-full h-full transition-transform duration-300 group-hover:scale-110">
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="object-contain w-full h-full filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                    />
+                  </div>
                 </div>
                 <p className="font-bold text-base text-gray-800 group-hover:text-[#1a5d3a] transition-colors">{partner.name}</p>
               </div>

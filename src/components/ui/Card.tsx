@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
 import {
@@ -93,10 +94,16 @@ export function PartnerCard({ name, logo, delay = 0 }: PartnerCardProps) {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay }}
-            className="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-all border border-gray-100 group h-full flex flex-col items-center justify-center min-h-[180px]"
+            className="bg-white rounded-2xl p-6 text-center hover:shadow-lg transition-all border border-gray-100 group h-full flex flex-col items-center justify-center min-h-[180px]"
         >
-            <div className="w-16 h-16 mx-auto mb-5 rounded-full bg-[#f8faf9] text-[#1a5d3a] flex items-center justify-center font-bold text-2xl group-hover:scale-110 group-hover:bg-[#1a5d3a] group-hover:text-white transition-all duration-300 shadow-sm">
-                {name.charAt(0)}
+            <div className="w-24 h-24 mx-auto mb-4 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                <Image
+                    src={logo}
+                    alt={name}
+                    width={100}
+                    height={100}
+                    className="object-contain max-h-20 w-auto filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                />
             </div>
             <p className="font-bold text-base text-gray-800 group-hover:text-[#1a5d3a] transition-colors">{name}</p>
         </motion.div>

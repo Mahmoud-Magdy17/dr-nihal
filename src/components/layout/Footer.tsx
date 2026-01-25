@@ -9,13 +9,10 @@ export default function Footer() {
         <footer className="bg-gradient-to-br from-[var(--primary-dark)] to-[var(--primary)] text-white relative z-10">
             {/* Main Footer Content */}
             <div className="container py-16 px-4 md:px-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
                     {/* About Section */}
                     <div>
-                        <div className="flex items-center gap-3 mb-4">
-                            <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center font-bold text-lg">
-                                ن.م
-                            </div>
+                        <div className="flex items-center gap-3 mb-6">
                             <div>
                                 <h3 className="font-bold text-lg">{CANDIDATE.name}</h3>
                                 <p className="text-xs opacity-80">مرشحة شعبة الكهرباء</p>
@@ -39,7 +36,7 @@ export default function Footer() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
-                                aria-label="صفحة فيسبوك"
+                                aria-label="زيارة صفحة فيسبوك الرسمية"
                             >
                                 <Facebook size={18} />
                             </a>
@@ -57,7 +54,7 @@ export default function Footer() {
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="font-bold text-lg mb-5 flex items-center gap-2">
+                        <h3 className="font-bold text-lg mb-8 flex items-center gap-4">
                             <span className="w-8 h-0.5 bg-[var(--secondary)]"></span>
                             روابط سريعة
                         </h3>
@@ -76,30 +73,11 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* More Links */}
-                    <div>
-                        <h3 className="font-bold text-lg mb-5 flex items-center gap-2">
-                            <span className="w-8 h-0.5 bg-[var(--secondary)]"></span>
-                            المزيد
-                        </h3>
-                        <ul className="space-y-3">
-                            {NAV_LINKS.slice(5).map((link) => (
-                                <li key={link.href}>
-                                    <Link
-                                        href={link.href}
-                                        className="text-sm opacity-90 hover:opacity-100 hover:text-[var(--secondary)] transition-colors flex items-center gap-2"
-                                    >
-                                        <span className="w-1.5 h-1.5 rounded-full bg-[var(--secondary)]"></span>
-                                        {link.label}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+
 
                     {/* Contact Info */}
                     <div>
-                        <h3 className="font-bold text-lg mb-5 flex items-center gap-2">
+                        <h3 className="font-bold text-lg mb-8 flex items-center gap-4">
                             <span className="w-8 h-0.5 bg-[var(--secondary)]"></span>
                             تواصل معنا
                         </h3>
@@ -157,11 +135,12 @@ export default function Footer() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="btn bg-[var(--primary)] text-white hover:bg-[var(--primary-dark)]"
+                                aria-label="انضم لمجموعة الواتساب"
                             >
                                 <MessageCircle size={20} />
                                 انضم للمجموعة
                             </a>
-                            <Link href="/contact" className="btn bg-white text-[var(--primary)] hover:bg-[var(--accent)]">
+                            <Link href="/contact" className="btn bg-white text-[var(--primary)] hover:bg-[var(--accent)]" aria-label="تواصل معنا">
                                 تواصل معنا
                             </Link>
                         </div>

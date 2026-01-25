@@ -65,7 +65,7 @@ export default function AchievementsPage() {
                         subtitle="محطات بارزة في المسيرة المهنية"
                     />
 
-                    <div className="grid lg:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                         {KEY_ACHIEVEMENTS.map((achievement, index) => (
                             <AchievementCard
                                 key={index}
@@ -86,7 +86,7 @@ export default function AchievementsPage() {
                         centered
                     />
 
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {impactStories.map((story, index) => {
                             const Icon = story.icon;
                             return (
@@ -116,7 +116,7 @@ export default function AchievementsPage() {
                         centered
                     />
 
-                    <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
                         <div className="card text-center">
                             <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-[var(--secondary)] to-[var(--secondary-light)] flex items-center justify-center">
                                 <span className="text-3xl">🏆</span>

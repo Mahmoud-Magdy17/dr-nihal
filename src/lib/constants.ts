@@ -24,7 +24,6 @@ export const NAV_LINKS = [
     { href: '/partnerships', label: 'الشراكات' },
     { href: '/achievements', label: 'الإنجازات' },
     { href: '/vision', label: 'البرنامج الانتخابي' },
-    { href: '/events', label: 'الفعاليات' },
     { href: '/gallery', label: 'معرض الصور' },
     { href: '/faq', label: 'أسئلة شائعة' },
     { href: '/contact', label: 'تواصل معنا' },
@@ -104,14 +103,13 @@ export const KEY_ACHIEVEMENTS = [
 ];
 
 export const PARTNERS = [
-    { name: 'جامعة سوهاج', nameEn: 'Sohag University', logo: '/images/partners/sohag-uni.png' },
-    { name: 'المجلس الأعلى للجامعات', nameEn: 'Supreme Council of Universities', logo: '/images/partners/scu.png' },
-    { name: 'وزارة الاتصالات وتكنولوجيا المعلومات', nameEn: 'MCIT', logo: '/images/partners/mcit.png' },
-    { name: 'أكاديمية هواوي', nameEn: 'Huawei Academy', logo: '/images/partners/huawei.png' },
-    { name: 'Creativa Innovation Hubs', nameEn: 'Creativa', logo: '/images/partners/creativa.png' },
-    { name: 'EdVentures', nameEn: 'EdVentures', logo: '/images/partners/edventures.png' },
-    { name: 'GIZ', nameEn: 'GIZ', logo: '/images/partners/giz.png' },
-    { name: 'وزارة الشباب والرياضة', nameEn: 'Ministry of Youth and Sports', logo: '/images/partners/moys.png' },
+    { name: 'المجلس الأعلى للجامعات', nameEn: 'Supreme Council of Universities', logo: '/images/partners/المجلس الاعلي للجامعات.png' },
+    { name: 'وزارة الاتصالات', nameEn: 'MCIT', logo: '/images/partners/وزارة الاتصالات وتكنولوجيا المعلومات.png' },
+    { name: 'Creativa Hubs', nameEn: 'Creativa', logo: '/images/partners/Creativa Innovation hubs.png' },
+    { name: 'Huawei Academy', nameEn: 'Huawei Academy', logo: '/images/partners/اكاديمية هواوي.png' },
+    { name: 'EdVentures', nameEn: 'EdVentures', logo: '/images/partners/edventures.jpg' },
+    { name: 'GIZ', nameEn: 'GIZ', logo: '/images/partners/giz5563.jpg' },
+    { name: 'وزارة الشباب والرياضة', nameEn: 'Ministry of Youth and Sports', logo: '/images/partners/وزارة الشباب والرياضة.png' },
 ];
 
 export const VISION_STATEMENT = 'نقابة حديثة، قريبة من المهندس، تدعمه مهنيًا، تفتح له فرص عمل حقيقية، تساعده على التطور المستمر، وتخدم أسرته وتواكب متغيرات العصر وسوق العمل.';
@@ -210,44 +208,7 @@ export const FAQ_ITEMS = [
     },
 ];
 
-export const EVENTS = [
-    {
-        id: '1',
-        title: 'لقاء مفتوح مع المهندسين الشباب',
-        date: '2026-02-01',
-        time: '6:00 PM',
-        location: 'نقابة المهندسين - سوهاج',
-        description: 'لقاء حواري لمناقشة تطلعات وتحديات المهندسين الشباب',
-        type: 'meeting',
-    },
-    {
-        id: '2',
-        title: 'زيارة ميدانية لمصنع الكابلات',
-        date: '2026-02-05',
-        time: '10:00 AM',
-        location: 'المنطقة الصناعية - سوهاج',
-        description: 'جولة تعريفية للمهندسين الجدد',
-        type: 'visit',
-    },
-    {
-        id: '3',
-        title: 'ورشة عمل: مهارات سوق العمل',
-        date: '2026-02-10',
-        time: '4:00 PM',
-        location: 'جامعة سوهاج - كلية الهندسة',
-        description: 'ورشة عمل حول المهارات المطلوبة في سوق العمل',
-        type: 'workshop',
-    },
-    {
-        id: '4',
-        title: 'لقاء مع ممثلي الشركات',
-        date: '2026-02-15',
-        time: '5:00 PM',
-        location: 'فندق شتايجنبرجر - سوهاج',
-        description: 'لقاء لبحث فرص التعاون والتوظيف',
-        type: 'meeting',
-    },
-];
+
 
 export const GALLERY_CATEGORIES = [
     { id: 'all', label: 'الكل' },

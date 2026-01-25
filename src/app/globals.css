@@ -104,8 +104,8 @@ body {
 
 /* Page Header Spacing */
 .pt-header-safe {
-  padding-top: 10rem;
-  /* 160px */
+  padding-top: 12rem;
+  /* 192px */
 }
 
 /* ... existing styles ... */

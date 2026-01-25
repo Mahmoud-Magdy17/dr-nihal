@@ -65,6 +65,7 @@ export default function GalleryPage() {
                                 alt="صورة الحملة الانتخابية"
                                 fill
                                 className="object-cover"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             />
                             <div className="gallery-overlay">
                                 <div className="text-white">
@@ -86,6 +87,7 @@ export default function GalleryPage() {
                                 alt="صورة شخصية"
                                 fill
                                 className="object-cover"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             />
                             <div className="gallery-overlay">
                                 <div className="text-white">

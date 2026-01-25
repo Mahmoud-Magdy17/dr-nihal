@@ -53,10 +53,7 @@ export default function Header() {
                     <div className="flex items-center justify-between">
                         {/* Logo */}
                         <Link href="/" className="flex items-center gap-3 group">
-                            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#1a5d3a] to-[#2e7d32] flex items-center justify-center text-white font-bold text-lg shadow-md group-hover:shadow-lg transition-all">
-                                ن.م
-                            </div>
-                            <div className="hidden sm:block">
+                            <div className="block">
                                 <p className="font-bold text-lg text-[#1a5d3a] leading-tight">
                                     م. نهال المغربي
                                 </p>
@@ -74,7 +71,7 @@ export default function Header() {
                                     key={link.href}
                                     href={link.href}
                                     className={`px-3 py-2 rounded-lg text-base font-medium transition-all duration-200 ${pathname === link.href
-                                        ? 'text-[#1a5d3a] bg-[#e8f5e9] font-bold'
+                                        ? 'text-[#1a5d3a] font-bold'
                                         : 'text-gray-600 hover:text-[#1a5d3a] hover:bg-gray-50'
                                         }`}
                                 >

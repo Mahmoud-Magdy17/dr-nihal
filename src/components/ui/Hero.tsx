@@ -15,8 +15,8 @@ export default function Hero() {
                 <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#c8a45c] rounded-full blur-[100px] transform -translate-x-1/2 translate-y-1/2"></div>
             </div>
 
-            <div className="container relative z-10 py-32 lg:py-40 px-4 md:px-6 lg:px-8">
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full">
+            <div className="container relative z-10 pt-[200px] pb-32 px-4 md:px-6 lg:px-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full">
 
                     {/* Content Side - Right for RTL */}
                     <motion.div
