@@ -1,0 +1,25 @@
+services:
+  # Website container
+  dr-nihal-website:
+    build: .
+    container_name: dr-nihal-website
+    restart: unless-stopped
+    networks:
+      - web
+
+  # Cloudflare Tunnel
+  cloudflared:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflared-tunnel
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      - TUNNEL_TOKEN=${CLOUDFLARE_TUNNEL_TOKEN}
+    networks:
+      - web
+    depends_on:
+      - dr-nihal-website
+
+networks:
+  web:
+    driver: bridge
