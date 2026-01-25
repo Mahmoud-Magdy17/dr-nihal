@@ -17,13 +17,13 @@ export const ChatBotHeader: React.FC<ChatBotHeaderProps> = React.memo(({
     onTitleClick,
 }) => {
     return (
-        <div className="bg-gradient-to-r from-[#1a5d3a] to-[#2e7d32] p-4 flex items-center justify-between text-white relative overflow-hidden shrink-0">
+        <div className="bg-gradient-to-r from-[#3d4a7b] to-[#4d5a8b] p-4 flex items-center justify-between text-white relative overflow-hidden shrink-0">
             <div className="flex items-center gap-3 relative z-10">
                 <div className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center border-2 border-white/20 shadow-inner">
-                    <Sparkles className="h-5 w-5 text-[#c8a45c]" />
+                    <Sparkles className="h-5 w-5 text-[#d4a843]" />
                 </div>
                 <div className="flex flex-col">
-                    <h3 className="font-bold text-lg text-white leading-none cursor-pointer hover:text-[#c8a45c] transition-colors" onClick={onTitleClick}>
+                    <h3 className="font-bold text-lg text-white leading-none cursor-pointer hover:text-[#d4a843] transition-colors" onClick={onTitleClick}>
                         {title}
                     </h3>
                     <p className="text-xs text-white/80 flex items-center gap-1">

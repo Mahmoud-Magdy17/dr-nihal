@@ -51,7 +51,7 @@ export default function Header() {
                         {/* Logo */}
                         <Link href="/" className="flex items-center gap-3 group">
                             <div className="block">
-                                <p className="font-bold text-lg text-[#1a5d3a] leading-tight">
+                                <p className="font-bold text-lg text-[#3d4a7b] leading-tight">
                                     م. نهال المغربي
                                 </p>
                                 <p className="text-xs text-gray-500 font-medium mt-1">
@@ -68,8 +68,8 @@ export default function Header() {
                                     key={link.href}
                                     href={link.href}
                                     className={`px-3 py-2 rounded-lg text-base font-medium transition-all duration-200 ${pathname === link.href
-                                        ? 'text-[#1a5d3a] font-bold'
-                                        : 'text-gray-600 hover:text-[#1a5d3a] hover:bg-gray-50'
+                                        ? 'text-[#3d4a7b] font-bold'
+                                        : 'text-gray-600 hover:text-[#3d4a7b] hover:bg-gray-50'
                                         }`}
                                 >
                                     {link.label}
@@ -82,8 +82,8 @@ export default function Header() {
                                     onMouseEnter={() => setIsDropdownOpen(true)}
                                     // onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                                     className={`flex items-center gap-1 px-3 py-2 rounded-lg text-base font-medium transition-all duration-200 ${isDropdownOpen || secondaryLinks.some(l => l.href === pathname)
-                                        ? 'text-[#1a5d3a] bg-[#e8f5e9] font-bold'
-                                        : 'text-gray-600 hover:text-[#1a5d3a] hover:bg-gray-50'
+                                        ? 'text-[#3d4a7b] bg-[#e8f5e9] font-bold'
+                                        : 'text-gray-600 hover:text-[#3d4a7b] hover:bg-gray-50'
                                         }`}
                                 >
                                     المزيد
@@ -107,8 +107,8 @@ export default function Header() {
                                                         key={link.href}
                                                         href={link.href}
                                                         className={`block px-6 py-4 text-base font-medium transition-colors ${pathname === link.href
-                                                            ? 'bg-[#e8f5e9] text-[#1a5d3a] font-bold'
-                                                            : 'text-gray-600 hover:bg-gray-50 hover:text-[#1a5d3a]'
+                                                            ? 'bg-[#e8f5e9] text-[#3d4a7b] font-bold'
+                                                            : 'text-gray-600 hover:bg-gray-50 hover:text-[#3d4a7b]'
                                                             }`}
                                                     >
                                                         {link.label}
@@ -148,7 +148,7 @@ export default function Header() {
                             {/* Mobile Menu Button */}
                             <button
                                 onClick={toggleMobileMenu}
-                                className="lg:hidden w-12 h-12 rounded-xl bg-gray-100 text-[#1a5d3a] flex items-center justify-center hover:bg-[#1a5d3a] hover:text-white transition-colors"
+                                className="lg:hidden w-12 h-12 rounded-xl bg-gray-100 text-[#3d4a7b] flex items-center justify-center hover:bg-[#3d4a7b] hover:text-white transition-colors"
                                 aria-label={isMobileMenuOpen ? 'إغلاق القائمة' : 'فتح القائمة'}
                                 aria-expanded={isMobileMenuOpen}
                             >
@@ -179,7 +179,7 @@ export default function Header() {
                             className="fixed top-0 right-0 h-full w-[85%] max-w-[320px] bg-white z-[1000] shadow-2xl flex flex-col"
                         >
                             {/* Mobile Menu Header */}
-                            <div className="p-6 bg-gradient-to-br from-[#1a5d3a] to-[#2e7d32] text-white relative flex-shrink-0">
+                            <div className="p-6 bg-gradient-to-br from-[#3d4a7b] to-[#4d5a8b] text-white relative flex-shrink-0">
                                 <button
                                     onClick={closeMobileMenu}
                                     className="absolute top-4 left-4 w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors"
@@ -211,11 +211,11 @@ export default function Header() {
                                             href={link.href}
                                             onClick={closeMobileMenu}
                                             className={`flex items-center px-4 py-3.5 rounded-xl text-base font-medium transition-all ${pathname === link.href
-                                                ? 'bg-[#e8f5e9] text-[#1a5d3a] font-bold shadow-sm'
+                                                ? 'bg-[#e8f5e9] text-[#3d4a7b] font-bold shadow-sm'
                                                 : 'text-gray-700 hover:bg-gray-50'
                                                 }`}
                                         >
-                                            <span className="w-2 h-2 rounded-full bg-[#1a5d3a] ml-3 opacity-0 transition-opacity" style={{ opacity: pathname === link.href ? 1 : 0 }} />
+                                            <span className="w-2 h-2 rounded-full bg-[#3d4a7b] ml-3 opacity-0 transition-opacity" style={{ opacity: pathname === link.href ? 1 : 0 }} />
                                             {link.label}
                                         </Link>
                                     </motion.div>

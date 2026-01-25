@@ -11,21 +11,21 @@ const steps = [
         icon: Users,
         title: 'تأكد إنك مهندس مسجل',
         description: 'لازم تكون مهندس مسجل في نقابة المهندسين الفرعية بسوهاج. تأكد من تحديث بياناتك قبل موعد الانتخابات.',
-        color: 'from-[#1a5d3a] to-[#2e7d32]',
+        color: 'from-[#3d4a7b] to-[#4d5a8b]',
     },
     {
         number: 2,
         icon: Calendar,
         title: 'روح النقابة يوم الانتخابات',
         description: `الانتخابات يوم ${ELECTION.date} في مقر نقابة المهندسين الفرعية بسوهاج. احرص على الحضور من بدري!`,
-        color: 'from-[#c8a45c] to-[#d4b87a]',
+        color: 'from-[#d4a843] to-[#d4b87a]',
     },
     {
         number: 3,
         icon: Vote,
         title: 'اختار م. نهال المغربي',
         description: `في ورقة الانتخاب، اختار م. نهال المغربي في ${ELECTION.seat} - لجنة فرعية. صوتك أمانة!`,
-        color: 'from-[#1a5d3a] to-[#2e7d32]',
+        color: 'from-[#3d4a7b] to-[#4d5a8b]',
     },
 ];
 
@@ -33,10 +33,10 @@ export default function HowToVotePage() {
     return (
         <>
             {/* Page Header */}
-            <section className="pt-header-safe pb-20 bg-gradient-to-br from-[#1a5d3a] to-[#2e7d32] relative overflow-hidden">
+            <section className="pt-header-safe pb-20 bg-gradient-to-br from-[#3d4a7b] to-[#4d5a8b] relative overflow-hidden">
                 <div className="absolute inset-0 opacity-10 pointer-events-none">
                     <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-white rounded-full blur-[80px] transform translate-x-1/2 -translate-y-1/2"></div>
-                    <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#c8a45c] rounded-full blur-[80px] transform -translate-x-1/2 translate-y-1/2"></div>
+                    <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#d4a843] rounded-full blur-[80px] transform -translate-x-1/2 translate-y-1/2"></div>
                 </div>
                 <div className="container relative z-10">
                     <motion.div
@@ -53,7 +53,7 @@ export default function HowToVotePage() {
             </section>
 
             {/* Election Info Banner */}
-            <section className="py-8 bg-[#c8a45c]">
+            <section className="py-8 bg-[#d4a843]">
                 <div className="container">
                     <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 text-white">
                         <div className="flex items-center gap-3">
@@ -91,8 +91,8 @@ export default function HowToVotePage() {
                             viewport={{ once: true }}
                             className="text-center mb-16"
                         >
-                            <span className="text-[#c8a45c] font-bold text-sm tracking-wider uppercase mb-2 block">خطوات بسيطة</span>
-                            <h2 className="text-4xl md:text-5xl font-bold text-[#1a5d3a] mb-4">الخطوات الثلاثة</h2>
+                            <span className="text-[#d4a843] font-bold text-sm tracking-wider uppercase mb-2 block">خطوات بسيطة</span>
+                            <h2 className="text-4xl md:text-5xl font-bold text-[#3d4a7b] mb-4">الخطوات الثلاثة</h2>
                             <p className="text-gray-600 text-xl">اتبع الخطوات دي عشان تشارك في الانتخابات</p>
                         </motion.div>
 
@@ -121,7 +121,7 @@ export default function HowToVotePage() {
                                                     <step.icon className="w-7 h-7 text-white" />
                                                 </div>
                                                 <div>
-                                                    <h3 className="text-2xl font-bold text-[#1a5d3a] mb-3">{step.title}</h3>
+                                                    <h3 className="text-2xl font-bold text-[#3d4a7b] mb-3">{step.title}</h3>
                                                     <p className="text-gray-600 text-lg leading-relaxed">{step.description}</p>
                                                 </div>
                                             </div>
@@ -143,10 +143,10 @@ export default function HowToVotePage() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                         >
-                            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-[#1a5d3a] text-white flex items-center justify-center">
+                            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-[#3d4a7b] text-white flex items-center justify-center">
                                 <Users size={40} />
                             </div>
-                            <h2 className="text-3xl md:text-4xl font-bold text-[#1a5d3a] mb-6">مين يقدر ينتخب؟</h2>
+                            <h2 className="text-3xl md:text-4xl font-bold text-[#3d4a7b] mb-6">مين يقدر ينتخب؟</h2>
                             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
                                 <p className="text-xl text-gray-700 leading-relaxed">
                                     {ELECTION.whoCanVote}
@@ -163,9 +163,9 @@ export default function HowToVotePage() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-24 bg-gradient-to-br from-[#1a5d3a] to-[#2e7d32] relative overflow-hidden">
+            <section className="py-24 bg-gradient-to-br from-[#3d4a7b] to-[#4d5a8b] relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-20 bg-white/5 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2"></div>
-                <div className="absolute bottom-0 left-0 p-32 bg-[#c8a45c]/20 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
+                <div className="absolute bottom-0 left-0 p-32 bg-[#d4a843]/20 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2"></div>
 
                 <div className="container relative z-10 px-4 md:px-6 lg:px-8">
                     <motion.div
@@ -184,14 +184,14 @@ export default function HowToVotePage() {
                                 href={CONTACT.whatsappGroup}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center justify-center gap-3 bg-[#c8a45c] hover:bg-[#d4b87a] text-white text-xl font-bold py-5 px-12 rounded-2xl transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1"
+                                className="inline-flex items-center justify-center gap-3 bg-[#d4a843] hover:bg-[#d4b87a] text-white text-xl font-bold py-5 px-12 rounded-2xl transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1"
                             >
                                 <MessageCircle size={26} />
                                 انضم لمجموعة الواتساب
                             </a>
                             <Link
                                 href="/vision"
-                                className="inline-flex items-center justify-center gap-3 bg-white hover:bg-gray-50 text-[#1a5d3a] text-xl font-bold py-5 px-10 rounded-2xl transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1"
+                                className="inline-flex items-center justify-center gap-3 bg-white hover:bg-gray-50 text-[#3d4a7b] text-xl font-bold py-5 px-10 rounded-2xl transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1"
                             >
                                 اطلع على البرنامج الانتخابي
                                 <ArrowLeft size={22} />

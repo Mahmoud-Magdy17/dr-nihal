@@ -56,7 +56,7 @@ export const ChatBotInput: React.FC<ChatBotInputProps> = React.memo(({
                 </div>
             )}
 
-            <div className="flex items-end gap-2 bg-gray-50 p-2 rounded-xl border border-gray-200 focus-within:border-[#1a5d3a]/50 focus-within:ring-1 focus-within:ring-[#1a5d3a]/20 transition-all shadow-inner">
+            <div className="flex items-end gap-2 bg-gray-50 p-2 rounded-xl border border-gray-200 focus-within:border-[#3d4a7b]/50 focus-within:ring-1 focus-within:ring-[#3d4a7b]/20 transition-all shadow-inner">
                 <textarea
                     value={inputValue}
                     onChange={(e) => onInputChange(e.target.value)}
@@ -113,7 +113,7 @@ export const ChatBotInput: React.FC<ChatBotInputProps> = React.memo(({
 
             <div className="text-center mt-1">
                 <p className="text-[10px] text-gray-400">
-                    {poweredByText} <a href="https://mrailabs.com" target="_blank" rel="noopener noreferrer" className="font-bold text-[#c8a45c] hover:underline">Mr. AI</a>
+                    {poweredByText} <a href="https://mrailabs.com" target="_blank" rel="noopener noreferrer" className="font-bold text-[#d4a843] hover:underline">Mr. AI</a>
                 </p>
             </div>
         </div>

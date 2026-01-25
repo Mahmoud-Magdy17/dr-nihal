@@ -4,13 +4,13 @@
 @source "../**/*.{js,ts,jsx,tsx,mdx}";
 
 :root {
-  /* Brand Colors - Extracted from Campaign Design */
-  --primary: #1a5d3a;
-  --primary-dark: #0f3d25;
-  --primary-light: #2e7d32;
-  --secondary: #c8a45c;
-  --secondary-light: #d4b87a;
-  --accent: #e8f5e9;
+  /* Brand Colors - Official Campaign Visual Identity */
+  --primary: #3d4a7b;
+  --primary-dark: #2d3a5b;
+  --primary-light: #4d5a8b;
+  --secondary: #d4a843;
+  --secondary-light: #e4b853;
+  --accent: #eef2ff;
   --background: #ffffff;
   --foreground: #1a1a1a;
   --muted: #6b7280;

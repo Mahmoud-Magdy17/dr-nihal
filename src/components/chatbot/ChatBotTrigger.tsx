@@ -31,12 +31,12 @@ export const ChatBotTrigger: React.FC<ChatBotTriggerProps> = React.memo(({
                         animate={{ opacity: 1, x: 0, scale: 1 }}
                         exit={{ opacity: 0, scale: 0.8 }}
                         className={cn(
-                            "bg-white shadow-lg rounded-2xl p-4 max-w-[200px] border border-[#c8a45c]/20 hidden md:block relative",
+                            "bg-white shadow-lg rounded-2xl p-4 max-w-[200px] border border-[#d4a843]/20 hidden md:block relative",
                             isRTL ? "order-last ml-2" : "mr-2"
                         )}
                     >
                         <div className={cn(
-                            "absolute top-1/2 -translate-y-1/2 w-3 h-3 bg-white border-t border-r border-[#c8a45c]/20 rotate-45",
+                            "absolute top-1/2 -translate-y-1/2 w-3 h-3 bg-white border-t border-r border-[#d4a843]/20 rotate-45",
                             isRTL ? "-left-1.5 border-t-0 border-r-0 border-b border-l" : "-right-1.5"
                         )} />
                         <p className="text-sm text-gray-700 font-medium relative z-10">{floatingMessageText}</p>
@@ -54,15 +54,15 @@ export const ChatBotTrigger: React.FC<ChatBotTriggerProps> = React.memo(({
                 whileTap={{ scale: 0.9 }}
                 onClick={onOpen}
                 className={cn(
-                    "p-4 rounded-full shadow-2xl text-white bg-gradient-to-r from-[#1a5d3a] to-[#2e7d32] border-2 border-[#c8a45c]/50 backdrop-blur-sm relative group",
+                    "p-4 rounded-full shadow-2xl text-white bg-gradient-to-r from-[#3d4a7b] to-[#2e7d32] border-2 border-[#d4a843]/50 backdrop-blur-sm relative group",
                     isOpen ? "hidden" : "flex"
                 )}
             >
                 <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-20 transition-opacity rounded-full" />
                 <MessageSquare className="h-8 w-8 relative z-10" />
                 <span className="absolute -top-1 -right-1 flex h-3 w-3">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#c8a45c] opacity-75" />
-                    <span className="relative inline-flex rounded-full h-3 w-3 bg-[#c8a45c]" />
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#d4a843] opacity-75" />
+                    <span className="relative inline-flex rounded-full h-3 w-3 bg-[#d4a843]" />
                 </span>
             </motion.button>
         </div>

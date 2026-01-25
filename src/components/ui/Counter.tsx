@@ -61,10 +61,10 @@ export default function Counter({ value, suffix = '', label, icon, delay = 0 }: 
             transition={{ duration: 0.5, delay }}
             className="bg-white rounded-3xl p-8 text-center shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-lg transition-all border border-gray-100 h-full flex flex-col items-center justify-center group"
         >
-            <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-[#e8f5e9] flex items-center justify-center text-[#1a5d3a] group-hover:scale-110 transition-transform duration-300 shadow-inner">
+            <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-[#e8f5e9] flex items-center justify-center text-[#3d4a7b] group-hover:scale-110 transition-transform duration-300 shadow-inner">
                 <Icon size={32} />
             </div>
-            <div className="text-4xl md:text-5xl font-extrabold text-[#1a5d3a] mb-2 font-numeric">
+            <div className="text-4xl md:text-5xl font-extrabold text-[#3d4a7b] mb-2 font-numeric">
                 <AnimatedCounter value={value} suffix={suffix} />
             </div>
             <p className="text-gray-500 text-base font-medium">{label}</p>

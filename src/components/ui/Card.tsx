@@ -63,15 +63,15 @@ export function ProgramCard({ icon, title, items, delay = 0 }: ProgramCardProps)
             className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all border border-gray-100 group h-full flex flex-col"
         >
             <div className="flex items-center gap-5 mb-6">
-                <div className="w-14 h-14 rounded-2xl bg-[#1a5d3a]/10 text-[#1a5d3a] flex items-center justify-center group-hover:bg-[#1a5d3a] group-hover:text-white transition-all duration-300">
+                <div className="w-14 h-14 rounded-2xl bg-[#3d4a7b]/10 text-[#3d4a7b] flex items-center justify-center group-hover:bg-[#3d4a7b] group-hover:text-white transition-all duration-300">
                     <Icon size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-[#1a5d3a] leading-tight flex-1">{title}</h3>
+                <h3 className="text-xl font-bold text-[#3d4a7b] leading-tight flex-1">{title}</h3>
             </div>
             <ul className="space-y-5 flex-1">
                 {items.map((item, index) => (
                     <li key={index} className="flex items-start gap-3 text-gray-600 text-base leading-relaxed">
-                        <Check size={18} className="text-[#c8a45c] flex-shrink-0 mt-1" />
+                        <Check size={18} className="text-[#d4a843] flex-shrink-0 mt-1" />
                         <span>{item}</span>
                     </li>
                 ))}
@@ -105,7 +105,7 @@ export function PartnerCard({ name, logo, delay = 0 }: PartnerCardProps) {
                     className="object-contain max-h-20 w-auto filter grayscale group-hover:grayscale-0 transition-all duration-300"
                 />
             </div>
-            <p className="font-bold text-base text-gray-800 group-hover:text-[#1a5d3a] transition-colors">{name}</p>
+            <p className="font-bold text-base text-gray-800 group-hover:text-[#3d4a7b] transition-colors">{name}</p>
         </motion.div>
     );
 }
@@ -125,7 +125,7 @@ export function AchievementCard({ achievement, index }: AchievementCardProps) {
             transition={{ duration: 0.4, delay: index * 0.1 }}
             className="flex items-start gap-5 p-6 bg-[#f8faf9] hover:bg-white rounded-2xl border border-transparent hover:border-gray-100 hover:shadow-md transition-all duration-300"
         >
-            <div className="w-10 h-10 bg-[#1a5d3a] text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg shadow-sm mt-1">
+            <div className="w-10 h-10 bg-[#3d4a7b] text-white rounded-full flex items-center justify-center flex-shrink-0 font-bold text-lg shadow-sm mt-1">
                 {index + 1}
             </div>
             <p className="text-gray-700 text-lg leading-relaxed">{achievement}</p>
