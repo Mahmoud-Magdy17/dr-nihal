@@ -58,7 +58,7 @@ export default function SupportersPage() {
     return (
         <>
             {/* Page Header */}
-            <section className="pt-32 pb-16 bg-gradient-to-br from-[var(--primary)] to-[var(--primary-light)]">
+            <section className="pt-header-safe pb-16 bg-gradient-to-br from-[var(--primary)] to-[var(--primary-light)]">
                 <div className="container">
                     <div className="text-center text-white">
                         <h1 className="text-4xl md:text-5xl font-bold mb-4">أصوات الداعمين</h1>

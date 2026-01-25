@@ -24,7 +24,7 @@ export const NAV_LINKS = [
     { href: '/partnerships', label: 'الشراكات' },
     { href: '/achievements', label: 'الإنجازات' },
     { href: '/vision', label: 'البرنامج الانتخابي' },
-    { href: '/gallery', label: 'معرض الصور' },
+
     { href: '/faq', label: 'أسئلة شائعة' },
     { href: '/contact', label: 'تواصل معنا' },
 ];
@@ -210,23 +210,7 @@ export const FAQ_ITEMS = [
 
 
 
-export const GALLERY_CATEGORIES = [
-    { id: 'all', label: 'الكل' },
-    { id: 'training', label: 'التدريب' },
-    { id: 'workshops', label: 'ورش العمل' },
-    { id: 'conferences', label: 'المؤتمرات' },
-    { id: 'startups', label: 'الشركات الناشئة' },
-    { id: 'visits', label: 'الزيارات الميدانية' },
-];
 
-export const GALLERY_IMAGES = [
-    { id: '1', src: '/images/gallery/training-1.jpg', category: 'training', alt: 'جلسة تدريبية' },
-    { id: '2', src: '/images/gallery/workshop-1.jpg', category: 'workshops', alt: 'ورشة عمل' },
-    { id: '3', src: '/images/gallery/conference-1.jpg', category: 'conferences', alt: 'مؤتمر' },
-    { id: '4', src: '/images/gallery/startup-1.jpg', category: 'startups', alt: 'إرشاد شركة ناشئة' },
-    { id: '5', src: '/images/gallery/visit-1.jpg', category: 'visits', alt: 'زيارة ميدانية' },
-    { id: '6', src: '/images/gallery/training-2.jpg', category: 'training', alt: 'تدريب طلاب' },
-];
 
 export const SUPPORT_ROLES = [
     { value: 'volunteer', label: 'متطوع' },

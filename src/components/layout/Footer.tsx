@@ -8,7 +8,7 @@ export default function Footer() {
     return (
         <footer className="bg-gradient-to-br from-[var(--primary-dark)] to-[var(--primary)] text-white relative z-10">
             {/* Main Footer Content */}
-            <div className="container py-16 px-4 md:px-6">
+            <div className="container py-16 px-4 md:px-8 lg:px-12">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
                     {/* About Section */}
                     <div>
@@ -124,7 +124,7 @@ export default function Footer() {
 
             {/* CTA Banner */}
             <div className="bg-[var(--secondary)] py-5">
-                <div className="container px-4 md:px-6 lg:px-8">
+                <div className="container px-4 md:px-8 lg:px-12">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                         <p className="font-semibold text-[var(--primary-dark)] text-lg">
                             انضم لحملة الدعم وكن جزءًا من التغيير
@@ -150,7 +150,7 @@ export default function Footer() {
 
             {/* Bottom Bar */}
             <div className="bg-[var(--primary-dark)]/50 py-5">
-                <div className="container px-4 md:px-6 lg:px-8">
+                <div className="container px-4 md:px-8 lg:px-12">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-2 text-sm opacity-80">
                         <p>
                             © {currentYear} حملة م. نهال المغربي - نقابة المهندسين بسوهاج
