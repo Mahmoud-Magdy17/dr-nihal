@@ -11,6 +11,17 @@ export const CANDIDATE = {
     profileImage: '/images/candidate/profile.jpg',
 };
 
+export const ELECTION = {
+    date: '27 فبراير 2026',
+    dateEn: 'February 27, 2026',
+    seat: 'مقعد كهرباء رقم 2',
+    seatEn: 'Electricity Seat #2',
+    branch: 'نقابة المهندسين الفرعية بسوهاج',
+    branchEn: 'Sohag Engineers Syndicate Branch',
+    whoCanVote: 'أي مهندس مسجل في نقابة المهندسين بسوهاج',
+    whoCanVoteEn: 'Any engineer registered with the Sohag Engineers Syndicate',
+};
+
 export const CONTACT = {
     whatsapp: '+201094727909',
     whatsappGroup: 'https://chat.whatsapp.com/DttXcp7KHFrE27YDkUGPPi',
@@ -24,7 +35,7 @@ export const NAV_LINKS = [
     { href: '/partnerships', label: 'الشراكات' },
     { href: '/achievements', label: 'الإنجازات' },
     { href: '/vision', label: 'البرنامج الانتخابي' },
-
+    { href: '/how-to-vote', label: 'إزاي أنتخب؟' },
     { href: '/faq', label: 'أسئلة شائعة' },
     { href: '/contact', label: 'تواصل معنا' },
 ];
@@ -187,6 +198,18 @@ export const ELECTORAL_PROGRAM = [
 
 export const FAQ_ITEMS = [
     {
+        question: 'متى موعد الانتخابات؟',
+        answer: 'الانتخابات يوم 27 فبراير 2026 في مقر نقابة المهندسين الفرعية بسوهاج. تأكد من حضورك في هذا اليوم للإدلاء بصوتك.',
+    },
+    {
+        question: 'من يحق له التصويت في الانتخابات؟',
+        answer: 'يحق لأي مهندس مسجل في نقابة المهندسين بسوهاج التصويت في انتخابات النقابة الفرعية. تأكد من تحديث بياناتك في النقابة قبل موعد الانتخابات.',
+    },
+    {
+        question: 'إزاي أنتخب م. نهال المغربي؟',
+        answer: 'الخطوات بسيطة: 1) تأكد إنك مهندس مسجل بنقابة سوهاج، 2) روح مقر النقابة يوم 27 فبراير 2026، 3) اختار م. نهال المغربي في مقعد كهرباء رقم 2 (لجنة فرعية). صوتك أمانة!',
+    },
+    {
         question: 'كيف ستطبقين رؤيتك عمليًا؟',
         answer: 'سأعتمد على خبرتي العملية في إدارة البرامج والمبادرات الوطنية، وسأبني شراكات استراتيجية مع المؤسسات الحكومية والخاصة، وسأضع خطط عمل واضحة وقابلة للقياس مع جداول زمنية محددة.',
     },
@@ -207,6 +230,7 @@ export const FAQ_ITEMS = [
         answer: 'يمكنك الانضمام لمجموعة الواتساب الخاصة بالحملة، أو التواصل معنا عبر صفحة الفيسبوك، أو ملء استمارة التطوع في صفحة التواصل. نرحب بكل أشكال الدعم والمشاركة.',
     },
 ];
+
 
 
 

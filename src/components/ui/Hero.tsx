@@ -3,8 +3,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { MessageCircle, FileText, Phone, ArrowLeft } from 'lucide-react';
-import { CANDIDATE, CONTACT } from '@/lib/constants';
+import { MessageCircle, FileText, Phone, ArrowLeft, CalendarDays, MapPin } from 'lucide-react';
+import { CANDIDATE, CONTACT, ELECTION } from '@/lib/constants';
 
 export default function Hero() {
     return (
@@ -30,10 +30,28 @@ export default function Hero() {
                             initial={{ opacity: 0, y: -20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="inline-flex items-center gap-3 bg-white/15 backdrop-blur-md rounded-full px-8 py-4 mb-8 border border-white/10"
+                            className="inline-flex items-center gap-3 bg-white/15 backdrop-blur-md rounded-full px-8 py-4 mb-4 border border-white/10"
                         >
                             <span className="w-2.5 h-2.5 bg-[#c8a45c] rounded-full animate-pulse shadow-[0_0_10px_#c8a45c]"></span>
                             <span className="text-base md:text-lg font-bold tracking-wide">انتخابات نقابة المهندسين 2026</span>
+                        </motion.div>
+
+                        {/* Election Date Card */}
+                        <motion.div
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.25 }}
+                            className="bg-gradient-to-r from-[#c8a45c] to-[#d4b87a] backdrop-blur-md rounded-2xl px-6 py-4 mb-8 flex items-center gap-4 shadow-xl"
+                        >
+                            <CalendarDays className="w-10 h-10 text-white" />
+                            <div>
+                                <p className="text-white/90 font-medium text-sm">موعد الانتخابات</p>
+                                <p className="text-white text-2xl font-extrabold">{ELECTION.date}</p>
+                            </div>
+                            <div className="mr-4 pr-4 border-r border-white/30">
+                                <p className="text-white/90 font-medium text-sm">المقعد</p>
+                                <p className="text-white text-lg font-bold">{ELECTION.seat}</p>
+                            </div>
                         </motion.div>
 
                         {/* Name */}

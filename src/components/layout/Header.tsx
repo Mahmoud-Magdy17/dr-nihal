@@ -13,8 +13,8 @@ export default function Header() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const pathname = usePathname();
 
-    // Group links: Show first 5 directly, others in dropdown
-    const VISIBLE_LINKS_COUNT = 5;
+    // Group links: Show first 6 directly, others in dropdown
+    const VISIBLE_LINKS_COUNT = 6;
     const primaryLinks = NAV_LINKS.slice(0, VISIBLE_LINKS_COUNT);
     const secondaryLinks = NAV_LINKS.slice(VISIBLE_LINKS_COUNT);
 

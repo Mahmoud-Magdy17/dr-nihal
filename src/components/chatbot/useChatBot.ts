@@ -53,6 +53,7 @@ export const useChatBot = () => {
 
     const getMenuOptions = useCallback((): MenuOption[] => {
         return [
+            { id: "how-to-vote", label: "إزاي أنتخب؟", action: "how-to-vote" },
             { id: "who-is", label: "من هي م. نهال المغربي؟", action: "who-is" },
             { id: "program", label: "ما هو البرنامج الانتخابي؟", action: "program" },
             { id: "achievements", label: "أهم الإنجازات السابقة", action: "achievements" },
