@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Phone, Facebook, MessageCircle, Mail, MapPin, Heart } from 'lucide-react';
 import { NAV_LINKS, CANDIDATE, CONTACT } from '@/lib/constants';
 
@@ -12,7 +13,17 @@ export default function Footer() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
                     {/* About Section */}
                     <div>
-                        <div className="flex items-center gap-3 mb-6">
+                        {/* Syndicate Logo */}
+                        <div className="mb-6">
+                            <Image
+                                src="/syndicate-logo-white.png"
+                                alt="نقابة المهندسين المصرية"
+                                width={120}
+                                height={80}
+                                className="object-contain opacity-90"
+                            />
+                        </div>
+                        <div className="flex items-center gap-3 mb-4">
                             <div>
                                 <h3 className="font-bold text-lg">{CANDIDATE.name}</h3>
                                 <p className="text-xs opacity-80">مرشحة شعبة الكهرباء</p>

@@ -62,7 +62,7 @@ export const ChatBot: React.FC = () => {
                         exit={{ opacity: 0, y: 20, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className={cn(
-                            "fixed bottom-24 z-50 w-[90vw] md:w-[400px] h-[600px] max-h-[80vh] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-100",
+                            "fixed bottom-24 z-[100] w-[90vw] md:w-[400px] h-[600px] max-h-[80vh] bg-white rounded-2xl shadow-2xl flex flex-col overflow-hidden border border-gray-100",
                             isRTL ? "left-6" : "right-6"
                         )}
                     >

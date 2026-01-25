@@ -1,6 +1,6 @@
 'use client';
 
-import React, { RefObject } from 'react';
+import React from 'react';
 import { Loader2, Mic } from 'lucide-react';
 import { cn } from './utils';
 import { Message } from './useChatBot';
@@ -11,7 +11,7 @@ interface ChatBotMessagesProps {
     isRTL: boolean;
     emptyText: string;
     thinkingText: string;
-    messagesEndRef: RefObject<HTMLDivElement>;
+    messagesEndRef: React.RefObject<HTMLDivElement | null>;
 }
 
 // Voice message component
@@ -58,7 +58,7 @@ export const ChatBotMessages: React.FC<ChatBotMessagesProps> = React.memo(({
                         "max-w-[85%] p-3.5 rounded-2xl text-sm relative group animate-in slide-in-from-bottom-2 duration-300 shadow-sm",
                         msg.isBot
                             ? "bg-white text-gray-800 rounded-tl-none border border-gray-100 ml-0 mr-auto rtl:mr-0 rtl:ml-auto"
-                            : "bg-gradient-to-br from-[#3d4a7b] to-[#2e7d32] text-white rounded-br-none ml-auto mr-0 rtl:ml-0 rtl:mr-auto"
+                            : "bg-gradient-to-br from-[#3d4a7b] to-[#4d5a8b] text-white rounded-br-none ml-auto mr-0 rtl:ml-0 rtl:mr-auto"
                     )}
                 >
                     {msg.type === 'voice' && msg.voiceUrl ? (

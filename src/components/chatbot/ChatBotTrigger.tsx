@@ -54,7 +54,7 @@ export const ChatBotTrigger: React.FC<ChatBotTriggerProps> = React.memo(({
                 whileTap={{ scale: 0.9 }}
                 onClick={onOpen}
                 className={cn(
-                    "p-4 rounded-full shadow-2xl text-white bg-gradient-to-r from-[#3d4a7b] to-[#2e7d32] border-2 border-[#d4a843]/50 backdrop-blur-sm relative group",
+                    "p-4 rounded-full shadow-2xl text-white bg-gradient-to-r from-[#3d4a7b] to-[#4d5a8b] border-2 border-[#d4a843]/50 backdrop-blur-sm relative group",
                     isOpen ? "hidden" : "flex"
                 )}
             >

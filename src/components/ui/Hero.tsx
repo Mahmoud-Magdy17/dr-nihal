@@ -25,6 +25,23 @@ export default function Hero() {
                         transition={{ duration: 0.8 }}
                         className="text-white order-2 lg:order-1 flex flex-col items-start"
                     >
+                        {/* Syndicate Logo */}
+                        <motion.div
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                            className="mb-6"
+                        >
+                            <Image
+                                src="/syndicate-logo-white.png"
+                                alt="نقابة المهندسين المصرية"
+                                width={160}
+                                height={100}
+                                className="object-contain drop-shadow-md opacity-90 hover:opacity-100 transition-opacity"
+                                priority
+                            />
+                        </motion.div>
+
                         {/* Election Badge */}
                         <motion.div
                             initial={{ opacity: 0, y: -20 }}

@@ -98,7 +98,7 @@ export const ChatBotInput: React.FC<ChatBotInputProps> = React.memo(({
                         "h-10 w-10 rounded-lg shrink-0 transition-all flex items-center justify-center text-white",
                         !inputValue.trim() || isRecording
                             ? "bg-gray-200 text-gray-400 cursor-not-allowed hover:bg-gray-200 hover:shadow-none"
-                            : "bg-[#1a5d3a] hover:bg-[#2e7d32] shadow-md"
+                            : "bg-[#3d4a7b] hover:bg-[#2d3a5b] shadow-md"
                     )}
                 >
                     <Send className="h-4 w-4" />
@@ -106,7 +106,7 @@ export const ChatBotInput: React.FC<ChatBotInputProps> = React.memo(({
             </div>
 
             {!showHomeView && (
-                <button onClick={onBackToMenu} className="text-[10px] text-gray-400 hover:text-[#1a5d3a] transition-colors mx-auto block mt-2">
+                <button onClick={onBackToMenu} className="text-[10px] text-gray-400 hover:text-[#3d4a7b] transition-colors mx-auto block mt-2">
                     {backToMenuText}
                 </button>
             )}
