@@ -61,11 +61,6 @@ export default function BiographyPage() {
                                             </div>
                                         </div>
 
-                                        {/* Download CV Button */}
-                                        <button className="btn btn-primary w-full">
-                                            <Download size={18} />
-                                            تحميل السيرة الذاتية
-                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -91,8 +86,8 @@ export default function BiographyPage() {
                                                 <BookOpen size={24} />
                                             </div>
                                             <div>
-                                                <h3 className="font-bold text-[var(--primary)]">مديرة وحدة الجاهزية المهنية</h3>
-                                                <p className="text-sm text-[var(--muted)]">وخدمات الطلاب - جامعة سوهاج</p>
+                                                <h3 className="font-bold text-[var(--primary)]">مدير وحدة التأهيل الوظيفي</h3>
+                                                <p className="text-sm text-[var(--muted)]">والخدمات الطلابية بجامعة سوهاج</p>
                                             </div>
                                         </div>
                                     </div>
