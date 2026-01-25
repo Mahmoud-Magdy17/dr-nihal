@@ -1,36 +1,238 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Campaign Website - Eng. Nehal Maghrabi
 
-## Getting Started
+موقع الحملة الانتخابية لـ م. نهال المغربي - مرشحة مقعد شعبة الكهرباء بنقابة المهندسين بسوهاج 2026
 
-First, run the development server:
+## 🎯 Overview
+
+A production-ready Arabic RTL campaign website built with Next.js 14, featuring modern UI/UX, smooth animations, and comprehensive SEO optimization.
+
+### Campaign Slogan
+> **"التغيير مش كلام… نية صادقة وخبرة حقيقية وعمل جاد"**
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
 
 ```bash
+# Clone the repository
+cd dr-nihal
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the website.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Create production build
+npm run build
 
-## Learn More
+# Start production server
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+dr-nihal/
+├── src/
+│   ├── app/                    # Next.js App Router pages
+│   │   ├── layout.tsx          # Root layout with RTL & SEO
+│   │   ├── page.tsx            # Homepage
+│   │   ├── biography/          # السيرة الذاتية
+│   │   ├── vision/             # البرنامج الانتخابي
+│   │   ├── partnerships/       # الشراكات
+│   │   ├── achievements/       # الإنجازات
+│   │   ├── contact/            # تواصل معنا
+│   │   ├── events/             # الفعاليات
+│   │   ├── faq/                # أسئلة شائعة
+│   │   ├── gallery/            # معرض الصور
+│   │   └── supporters/         # أصوات الداعمين
+│   │
+│   ├── components/
+│   │   ├── layout/             # Header, Footer, Container
+│   │   ├── ui/                 # Reusable UI components
+│   │   └── sections/           # Page-specific sections
+│   │
+│   └── lib/
+│       └── constants.ts        # All content & configuration
+│
+├── public/
+│   └── images/
+│       ├── candidate/          # Candidate photos
+│       ├── partners/           # Partner logos
+│       └── gallery/            # Media gallery
+│
+└── tailwind.config.ts          # Tailwind configuration
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎨 Design System
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Brand Colors
+
+| Color | Value | Usage |
+|-------|-------|-------|
+| Primary | `#1a5d3a` | Main brand color |
+| Primary Light | `#2e7d32` | Hover states |
+| Secondary | `#c8a45c` | Accents, CTAs |
+| Accent | `#e8f5e9` | Backgrounds |
+
+### Typography
+
+- **Arabic**: Cairo (Google Fonts)
+- **Direction**: RTL (Right-to-Left)
+
+---
+
+## 📝 Content Updates
+
+### Adding Events
+
+Edit `src/lib/constants.ts`:
+
+```typescript
+export const EVENTS = [
+  {
+    id: '1',
+    title: 'عنوان الفعالية',
+    date: '2026-02-01',
+    time: '6:00 PM',
+    location: 'المكان',
+    description: 'وصف الفعالية',
+    type: 'meeting', // meeting | visit | workshop
+  },
+  // Add more events...
+];
+```
+
+### Adding FAQ Items
+
+Edit `src/lib/constants.ts`:
+
+```typescript
+export const FAQ_ITEMS = [
+  {
+    question: 'السؤال هنا؟',
+    answer: 'الإجابة هنا...',
+  },
+  // Add more FAQs...
+];
+```
+
+### Adding Gallery Images
+
+1. Add images to `public/images/gallery/`
+2. Update `src/lib/constants.ts`:
+
+```typescript
+export const GALLERY_IMAGES = [
+  { 
+    id: '1', 
+    src: '/images/gallery/image-name.jpg', 
+    category: 'training', 
+    alt: 'وصف الصورة' 
+  },
+  // Add more images...
+];
+```
+
+### Updating Partners
+
+Edit `src/lib/constants.ts`:
+
+```typescript
+export const PARTNERS = [
+  { 
+    name: 'اسم الشريك', 
+    nameEn: 'Partner Name', 
+    logo: '/images/partners/logo.png' 
+  },
+  // Add more partners...
+];
+```
+
+---
+
+## 🔗 Social Links
+
+Update contact information in `src/lib/constants.ts`:
+
+```typescript
+export const CONTACT = {
+  whatsapp: '+201094727909',
+  whatsappGroup: 'https://chat.whatsapp.com/...',
+  facebook: 'https://www.facebook.com/...',
+  email: 'email@example.com',
+};
+```
+
+---
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+1. Push to GitHub
+2. Import project in Vercel
+3. Deploy (auto-detected as Next.js)
+
+### Netlify
+
+```bash
+npm run build
+# Upload .next folder
+```
+
+### Docker
+
+```dockerfile
+FROM node:18-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm install
+COPY . .
+RUN npm run build
+EXPOSE 3000
+CMD ["npm", "start"]
+```
+
+---
+
+## ✅ Features
+
+- ✅ Arabic RTL layout
+- ✅ Responsive design (mobile-first)
+- ✅ SEO optimized with meta tags
+- ✅ Structured data (Person schema)
+- ✅ Smooth Framer Motion animations
+- ✅ Fast page loads with Next.js
+- ✅ Accessible navigation
+- ✅ Contact form with validation
+- ✅ Interactive FAQ accordion
+- ✅ Events calendar
+- ✅ Photo gallery with lightbox
+
+---
+
+## 📞 Support
+
+For technical support, contact the development team.
+
+---
+
+Made with ❤️ for a better future of engineers
