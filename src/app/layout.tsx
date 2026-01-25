@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Header, Footer } from "@/components/layout";
+import { ChatBot } from "@/components/chatbot";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nehal-maghrabi.com"),
@@ -74,6 +75,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <ChatBot />
       </body>
     </html>
   );

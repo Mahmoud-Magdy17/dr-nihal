@@ -1,6 +1,8 @@
+'use client';
+
 import React, { RefObject } from 'react';
 import { Loader2, Mic } from 'lucide-react';
-import { cn } from '../../../shared/ui/Container';
+import { cn } from './utils';
 import { Message } from './useChatBot';
 
 interface ChatBotMessagesProps {
@@ -19,7 +21,7 @@ const VoiceMessageBubble: React.FC<{ voiceUrl: string; isBot: boolean }> = ({ vo
             "w-8 h-8 rounded-full flex items-center justify-center shrink-0",
             isBot ? "bg-gray-100" : "bg-white/20"
         )}>
-            <Mic className={cn("h-4 w-4", isBot ? "text-primary" : "text-white")} />
+            <Mic className={cn("h-4 w-4", isBot ? "text-[#1a5d3a]" : "text-white")} />
         </div>
         <audio
             controls
@@ -56,7 +58,7 @@ export const ChatBotMessages: React.FC<ChatBotMessagesProps> = React.memo(({
                         "max-w-[85%] p-3.5 rounded-2xl text-sm relative group animate-in slide-in-from-bottom-2 duration-300 shadow-sm",
                         msg.isBot
                             ? "bg-white text-gray-800 rounded-tl-none border border-gray-100 ml-0 mr-auto rtl:mr-0 rtl:ml-auto"
-                            : "bg-gradient-to-br from-primary to-accent-600 text-white rounded-br-none ml-auto mr-0 rtl:ml-0 rtl:mr-auto"
+                            : "bg-gradient-to-br from-[#1a5d3a] to-[#2e7d32] text-white rounded-br-none ml-auto mr-0 rtl:ml-0 rtl:mr-auto"
                     )}
                 >
                     {msg.type === 'voice' && msg.voiceUrl ? (
@@ -76,7 +78,7 @@ export const ChatBotMessages: React.FC<ChatBotMessagesProps> = React.memo(({
             {isLoading && (
                 <div className="flex items-center gap-2 text-gray-400 text-xs p-2 animate-pulse">
                     <div className="h-8 w-8 rounded-full bg-white border border-gray-100 flex items-center justify-center shadow-sm">
-                        <Loader2 className="h-4 w-4 animate-spin text-primary" />
+                        <Loader2 className="h-4 w-4 animate-spin text-[#1a5d3a]" />
                     </div>
                     <span>{thinkingText}</span>
                 </div>

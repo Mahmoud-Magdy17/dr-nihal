@@ -104,7 +104,7 @@ body {
 
 /* Page Header Spacing */
 .pt-header-safe {
-  padding-top: 12rem;
+  padding-top: 6rem;
   /* 192px */
 }
 
@@ -124,7 +124,7 @@ body {
   }
 
   .pt-header-safe {
-    padding-top: 8rem;
+    padding-top: 6rem;
     /* 128px */
   }
 }

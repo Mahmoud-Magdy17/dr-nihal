@@ -1,5 +1,6 @@
+'use client';
+
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
 import { useVoiceRecorder, VoiceRecordingResult } from './useVoiceRecorder';
 
 export interface Message {
@@ -16,15 +17,14 @@ export interface MenuOption {
     label: string;
     action: string;
 }
-/// this is edit
-const WEBHOOK_URL = 'https://n8n.growhubeg.com/webhook/innovision-chatbot';
+
+const WEBHOOK_URL = 'https://n8n.growhubeg.com/webhook/Nehal-website-chatbot';
 
 // Generate unique IDs
 const generateId = (prefix: string) =>
     `${prefix}_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
 
 export const useChatBot = () => {
-    const { t, i18n } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([]);
     const [inputValue, setInputValue] = useState('');
@@ -37,7 +37,7 @@ export const useChatBot = () => {
     const [chatId] = useState(() => generateId('chat'));
 
     const messagesEndRef = useRef<HTMLDivElement>(null);
-    const isRTL = i18n.language === 'ar';
+    const isRTL = true; // Always Arabic for this site
 
     // Voice recorder hook
     const voiceRecorder = useVoiceRecorder();
@@ -52,16 +52,14 @@ export const useChatBot = () => {
     }, [messages, isOpen, showHomeView]);
 
     const getMenuOptions = useCallback((): MenuOption[] => {
-        const isArabic = i18n.language === 'ar';
         return [
-            { id: "what-is-innovision", label: isArabic ? "ما هي فكرة مؤتمر InnoVision Sohag؟" : "What is InnoVision Sohag?", action: "what-is-innovision" },
-            { id: "when-event", label: isArabic ? "متى يقام المؤتمر والمعرض؟" : "When does the conference take place?", action: "when-event" },
-            { id: "where-event", label: isArabic ? "أين يقام الحدث؟" : "Where is the event held?", action: "where-event" },
-            { id: "competition-tracks", label: isArabic ? "ما هي مجالات المسابقة؟" : "What are the competition tracks?", action: "competition-tracks" },
-            { id: "how-register", label: isArabic ? "كيف يمكنني التسجيل؟" : "How can I register?", action: "how-register" },
-            { id: "event-partners", label: isArabic ? "من هم شركاء المؤتمر؟" : "Who are the event partners?", action: "event-partners" },
+            { id: "who-is", label: "من هي م. نهال المغربي؟", action: "who-is" },
+            { id: "program", label: "ما هو البرنامج الانتخابي؟", action: "program" },
+            { id: "achievements", label: "أهم الإنجازات السابقة", action: "achievements" },
+            { id: "contact", label: "كيف يمكنني التواصل؟", action: "contact" },
+            { id: "join", label: "كيف أنضم للحملة؟", action: "join" },
         ];
-    }, [i18n.language]);
+    }, []);
 
     // Handle bot response
     const handleBotResponse = useCallback(async (response: Response) => {
@@ -82,12 +80,12 @@ export const useChatBot = () => {
 
         setMessages(prev => [...prev, {
             id: generateId('msg'),
-            text: botText || t('chatbot.defaultResponse', 'I understood that, but have no specific reply.'),
+            text: botText || 'عذراً، لم أتمكن من فهم ذلك. يرجى المحاولة مرة أخرى.',
             isBot: true,
             timestamp: new Date(),
             type: 'text',
         }]);
-    }, [t]);
+    }, []);
 
     // Send text message
     const handleSendMessage = useCallback(async (text: string) => {
@@ -117,7 +115,7 @@ export const useChatBot = () => {
                     session_id: sessionId,
                     chat_id: chatId,
                     type: 'text',
-                    language: i18n.language,
+                    language: 'ar',
                 }),
             });
 
@@ -126,7 +124,7 @@ export const useChatBot = () => {
             console.error('Chat error:', error);
             setMessages(prev => [...prev, {
                 id: generateId('msg'),
-                text: t('chatbot.error', 'Sorry, I am having trouble connecting to the spirits. Please try again.'),
+                text: 'عذراً، هناك مشكلة في الاتصال. يرجى المحاولة لاحقاً.',
                 isBot: true,
                 timestamp: new Date(),
                 type: 'text',
@@ -134,7 +132,7 @@ export const useChatBot = () => {
         } finally {
             setIsLoading(false);
         }
-    }, [isLoading, showHomeView, sessionId, chatId, i18n.language, t, handleBotResponse]);
+    }, [isLoading, showHomeView, sessionId, chatId, handleBotResponse]);
 
     // Send voice message
     const handleSendVoice = useCallback(async (voiceData: VoiceRecordingResult) => {
@@ -146,7 +144,7 @@ export const useChatBot = () => {
 
         const userMsg: Message = {
             id: generateId('msg'),
-            text: t('chatbot.voiceMessage', 'Voice message'),
+            text: 'رسالة صوتية',
             isBot: false,
             timestamp,
             type: 'voice',
@@ -166,7 +164,7 @@ export const useChatBot = () => {
             formData.append('type', 'voice');
             formData.append('file_name', voiceData.fileName);
             formData.append('file_size', voiceData.fileSize.toString());
-            formData.append('language', i18n.language);
+            formData.append('language', 'ar');
 
             const response = await fetch(WEBHOOK_URL, {
                 method: 'POST',
@@ -178,7 +176,7 @@ export const useChatBot = () => {
             console.error('Voice send error:', error);
             setMessages(prev => [...prev, {
                 id: generateId('msg'),
-                text: t('chatbot.error', 'Sorry, I am having trouble connecting to the spirits. Please try again.'),
+                text: 'عذراً، هناك مشكلة في الاتصال. يرجى المحاولة لاحقاً.',
                 isBot: true,
                 timestamp: new Date(),
                 type: 'text',
@@ -186,7 +184,7 @@ export const useChatBot = () => {
         } finally {
             setIsLoading(false);
         }
-    }, [isLoading, showHomeView, sessionId, chatId, i18n.language, t, handleBotResponse]);
+    }, [isLoading, showHomeView, sessionId, chatId, handleBotResponse]);
 
     // Start voice recording
     const startVoiceRecording = useCallback(async () => {
@@ -210,6 +208,9 @@ export const useChatBot = () => {
         setMessages([]);
         setShowHomeView(true);
     }, []);
+
+    // Placeholder t function to match component usage if I don't update all components perfectly yet
+    const t = (key: string, defaultValue: string) => defaultValue;
 
     return {
         isOpen, setIsOpen,
