@@ -7,7 +7,7 @@
 A production-ready Arabic RTL campaign website built with Next.js 14, featuring modern UI/UX, smooth animations, and comprehensive SEO optimization.
 
 ### Campaign Slogan
-> **"التغيير مش كلام… نية صادقة وخبرة حقيقية وعمل جاد"**
+> **"التغيير مش كلام… التغيير نية صادقة وخبرة حقيقية وعمل جاد"**
 
 ---
 

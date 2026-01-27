@@ -28,7 +28,7 @@ export default function VisionPage() {
                 <div className="container px-4 md:px-6 lg:px-8">
                     <div className="text-center">
                         <p className="text-xl md:text-2xl font-bold text-[var(--primary-dark)]">
-                            "التغيير مش كلام… نية صادقة وخبرة حقيقية وعمل جاد"
+                            "التغيير مش كلام… التغيير نية صادقة وخبرة حقيقية وعمل جاد"
                         </p>
                     </div>
                 </div>

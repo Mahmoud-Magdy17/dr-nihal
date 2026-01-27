@@ -5,7 +5,7 @@ export const CANDIDATE = {
     nameEn: 'Eng. Nehal Maghrabi',
     position: 'مرشحة لمقعد شعبة الكهرباء – نقابة المهندسين بسوهاج',
     positionEn: 'Candidate for Electricity Division Seat – Engineers Syndicate of Sohag',
-    mainSlogan: 'التغيير مش كلام… نية صادقة وخبرة حقيقية وعمل جاد',
+    mainSlogan: 'التغيير مش كلام… التغيير نية صادقة وخبرة حقيقية وعمل جاد',
     secondarySlogan: 'من أجل نقابة أقرب للمهندس ومستقبل أفضل',
     heroImage: '/images/candidate/hero.jpg',
     profileImage: '/images/candidate/profile.jpg',

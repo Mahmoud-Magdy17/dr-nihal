@@ -104,7 +104,7 @@ export default function Hero() {
                                 التغيير مش كلام…
                             </p>
                             <p className="text-2xl sm:text-3xl font-bold leading-normal text-[#d4a843]">
-                                نية صادقة وخبرة حقيقية وعمل جاد
+                                التغيير نية صادقة وخبرة حقيقية وعمل جاد
                             </p>
                         </motion.div>
 
