@@ -34,6 +34,7 @@ export const NAV_LINKS = [
     { href: '/biography', label: 'السيرة الذاتية' },
     { href: '/partnerships', label: 'الشراكات' },
     { href: '/achievements', label: 'الإنجازات' },
+    { href: '/events', label: 'أحداث وفعاليات' },
     { href: '/vision', label: 'البرنامج الانتخابي' },
     { href: '/how-to-vote', label: 'إزاي أنتخب؟' },
     { href: '/faq', label: 'أسئلة شائعة' },

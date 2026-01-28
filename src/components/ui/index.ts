@@ -5,4 +5,6 @@ export { default as Accordion } from './Accordion';
 export { default as SectionTitle } from './SectionTitle';
 export { Card, ProgramCard, PartnerCard, AchievementCard } from './Card';
 export { default as ContactForm } from './ContactForm';
+export { default as EventAlbumCard } from './EventAlbumCard';
+export { default as EventModal } from './EventModal';
 
