@@ -34,8 +34,8 @@
 1. افتح Termius واتصل بالسيرفر
 2. أنشئ مجلد للمشروع:
 ```bash
-mkdir -p /opt/dr-nihal
-cd /opt/dr-nihal
+mkdir -p /opt/eng-nehal
+cd /opt/eng-nehal
 ```
 
 ### 2.2 رفع الملفات (من جهازك)
@@ -48,7 +48,7 @@ cd /opt/dr-nihal
 يمكنك استخدام SFTP في Termius أو الأمر:
 ```bash
 # من جهازك (PowerShell)
-scp -r out Dockerfile nginx.conf docker-compose.yml user@your-server-ip:/opt/dr-nihal/
+scp -r out Dockerfile nginx.conf docker-compose.yml user@your-server-ip:/opt/eng-nehal/
 ```
 
 ---
@@ -58,7 +58,7 @@ scp -r out Dockerfile nginx.conf docker-compose.yml user@your-server-ip:/opt/dr-
 ### 3.1 إنشاء ملف .env
 على السيرفر:
 ```bash
-cd /opt/dr-nihal
+cd /opt/eng-nehal
 nano .env
 ```
 
@@ -74,7 +74,7 @@ CLOUDFLARE_TUNNEL_TOKEN=eyJhIjoixxxxxxxxxxxxxxxxx
 ## الخطوة 4: تشغيل الموقع
 
 ```bash
-cd /opt/dr-nihal
+cd /opt/eng-nehal
 
 # بناء وتشغيل الـ containers
 docker compose up -d --build

@@ -159,7 +159,7 @@ export default function Hero() {
                             <div className="relative w-[320px] h-[320px] sm:w-[400px] sm:h-[400px] lg:w-[480px] lg:h-[480px] rounded-full p-2 border border-white/20 bg-white/5 backdrop-blur-sm">
                                 <div className="w-full h-full rounded-full overflow-hidden border-[6px] border-white/30 shadow-2xl relative">
                                     <Image
-                                        src="/images/candidate/profile.jpg"
+                                        src="/images/candidate/profile.jpeg"
                                         alt="م. نهال المغربي"
                                         fill
                                         sizes="(max-width: 640px) 320px, (max-width: 1024px) 400px, 480px"

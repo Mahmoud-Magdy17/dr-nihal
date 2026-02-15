@@ -2,8 +2,14 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Loader2, CheckCircle } from 'lucide-react';
+import { Send, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 import { SUPPORT_ROLES } from '@/lib/constants';
+
+// EmailJS Configuration
+const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '';
+const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '';
+const EMAILJS_PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '';
 
 export default function ContactForm() {
     const [formData, setFormData] = useState({
@@ -15,24 +21,81 @@ export default function ContactForm() {
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
+    const [error, setError] = useState<string | null>(null);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
+        setError(null); // Clear error when user starts typing
+    };
+
+    const getRoleLabel = (roleValue: string) => {
+        const role = SUPPORT_ROLES.find(r => r.value === roleValue);
+        return role ? role.label : roleValue;
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
+        setError(null);
 
-        // Simulate form submission
-        await new Promise((resolve) => setTimeout(resolve, 1500));
+        // Check if EmailJS is configured
+        if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+            console.error('EmailJS not configured properly');
+            setError('عفواً، خدمة الإرسال غير مُفعّلة حالياً. برجاء التواصل عبر الواتساب.');
+            setIsSubmitting(false);
+            return;
+        }
 
-        setIsSubmitting(false);
-        setIsSuccess(true);
-        setFormData({ name: '', phone: '', email: '', message: '', role: '' });
+        const submittedAt = new Date().toLocaleString('ar-EG', {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+        });
 
-        // Reset success message after 5 seconds
-        setTimeout(() => setIsSuccess(false), 5000);
+        try {
+            await emailjs.send(
+                EMAILJS_SERVICE_ID,
+                EMAILJS_TEMPLATE_ID,
+                {
+                    from_name: formData.name,
+                    from_email: formData.email || 'لم يُحدد',
+                    from_phone: formData.phone,
+                    support_type: getRoleLabel(formData.role),
+                    time: submittedAt,
+                    message: `
+📬 رسالة جديدة من موقع حملة م. نهال المغربي
+
+👤 الاسم: ${formData.name}
+📱 الهاتف: ${formData.phone}
+📧 البريد: ${formData.email || 'لم يُحدد'}
+🎯 نوع الدعم: ${getRoleLabel(formData.role)}
+🕒 التاريخ: ${submittedAt}
+
+📝 الرسالة:
+${formData.message}
+
+---
+تم الإرسال من موقع الحملة الانتخابية
+                    `.trim(),
+                },
+                EMAILJS_PUBLIC_KEY
+            );
+
+            console.log('Email sent successfully!');
+            setIsSuccess(true);
+            setFormData({ name: '', phone: '', email: '', message: '', role: '' });
+
+            // Reset success message after 5 seconds
+            setTimeout(() => setIsSuccess(false), 5000);
+        } catch (err) {
+            console.error('Email send error:', err);
+            setError('حدث خطأ أثناء الإرسال. برجاء المحاولة مرة أخرى أو التواصل عبر الواتساب.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -137,6 +200,18 @@ export default function ContactForm() {
                     placeholder="اكتب رسالتك هنا..."
                 />
             </div>
+
+            {/* Error Message */}
+            {error && (
+                <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="flex items-center gap-2 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700"
+                >
+                    <AlertCircle size={20} className="flex-shrink-0" />
+                    <p>{error}</p>
+                </motion.div>
+            )}
 
             {/* Submit Button */}
             <div className="flex items-center gap-4">

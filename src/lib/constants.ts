@@ -8,7 +8,7 @@ export const CANDIDATE = {
     mainSlogan: 'التغيير مش كلام… التغيير نية صادقة وخبرة حقيقية وعمل جاد',
     secondarySlogan: 'من أجل نقابة أقرب للمهندس ومستقبل أفضل',
     heroImage: '/images/candidate/hero.jpg',
-    profileImage: '/images/candidate/profile.jpg',
+    profileImage: '/images/candidate/profile.jpeg',
 };
 
 export const ELECTION = {
